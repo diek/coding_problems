@@ -1,0 +1,52 @@
+[project]
+name = "coding-problems"
+version = "0.1.0"
+description = "Various Python coding problems"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.12.15",
+    "django>=5.2.4",
+    "pytest>=8.4.1",
+    "pytest-django>=4.11.1",
+]
+
+[tool.ruff]
+# Set the maximum line length for formatting and linting.
+line-length = 100
+
+# Specify the target Python version for compatibility checks.
+target-version = "py310"
+
+# Select which rule sets to enable. "E" and "F" are common for error and flake8 rules.
+select = ["E", "F", "W", "I", "B", "C", "N", "D", "UP"]
+
+# Ignore specific rules you don't want to enforce.
+ignore = ["E501"] # Example: Ignore line-too-long rule if using a formatter like Black
+
+# Configure the Ruff Linter.
+[tool.ruff.lint]
+# Enable Pyflakes (`F`), a subset of pycodestyle (`E`), and isort-compatible rules (`I`).
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = []
+# Allow fixing all enabled rules when `--fix` is provided.
+fixable = ["ALL"]
+unfixable = []
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Configure the Ruff Formatter.
+[tool.ruff.format]
+# Set the quote style for strings.
+quote-style = "double"
+
+# Set the indentation style.
+indent-style = "space"
+
+# Control handling of magic trailing commas (often used for multiline lists/dicts).
+skip-magic-trailing-comma = false
+
+# Set the line ending style.
+line-ending = "auto"
+
+

@@ -1,0 +1,11 @@
+id,password,last_login,is_superuser,username,last_name,email,is_staff,is_active,date_joined,first_name
+1,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,1,tony.soprano,Soprano,tony.soprano@bing.com,1,1,2025-07-23T17:35:11.726239Z,Tony
+2,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,carmela.soprano,Soprano,carmela@bing.com,1,1,2025-07-23T17:35:11.726239Z,Carmela
+3,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,christopher.moltisanti,Moltisanti,chrissy@bing.com,1,1,2025-07-23T17:35:11.726239Z,Christopher
+4,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,paulie.walnuts,Gualtieri,paulie@bing.com,1,1,2025-07-23T17:35:11.726239Z,Paulie
+5,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,silvio.dante,Dante,sil@bing.com,1,1,2025-07-23T17:35:11.726239Z,Silvio
+6,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,aj.soprano,Soprano,aj@bing.com,1,1,2025-07-23T17:35:11.726239Z,A.J.
+7,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,junior.soprano,Soprano,junior@bing.com,1,1,2025-07-23T17:35:11.726239Z,Junior
+8,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,ralph.cifaretto,Cifaretto,ralph@bing.com,1,1,2025-07-23T17:35:11.726239Z,Ralph
+9,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,bobby.baccalieri,Baccalieri,bobby@bing.com,1,1,2025-07-23T17:35:11.726239Z,Bobby
+10,pbkdf2_sha256$260000$abc123$abcd...,2025-07-23T17:35:11.726239Z,0,janice.soprano,Soprano,janice@bing.com,1,1,2025-07-23T17:35:11.726239Z,Janice

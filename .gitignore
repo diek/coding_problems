@@ -1,0 +1,28 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Sensitive information
+local_settings.py
+config.py
+
+# Log files and temporary files
+*.log
+*.tmp
+temp/
+
+# Database files
+*.sqlite3
+*.db

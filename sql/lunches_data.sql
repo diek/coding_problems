@@ -1,0 +1,152 @@
+-- DEPARTMENTS TABLE
+
+INSERT INTO departments VALUES ('ACT', 'ACCOUNTING');
+INSERT INTO departments VALUES ('EXE', 'EXECUTIVE');
+INSERT INTO departments VALUES ('MKT', 'MARKETING');
+INSERT INTO departments VALUES ('PER', 'PERSONNEL');
+INSERT INTO departments VALUES ('SAL', 'SALES');
+INSERT INTO departments VALUES ('SHP', 'SHIPPING');
+COMMIT;
+
+-- SUPPLIERS TABLE
+INSERT INTO suppliers VALUES ('ARR', 'ALICE & RAY''S RESTAURANT');
+INSERT INTO suppliers VALUES ('ASP', 'A SOUP PLACE');
+INSERT INTO suppliers VALUES ('CBC', 'CERTIFIED BEEF COMPANY');
+INSERT INTO suppliers VALUES ('FRV', 'FRANK REED''S VEGETABLES');
+INSERT INTO suppliers VALUES ('FSN', 'FRANK & SONS');
+INSERT INTO suppliers VALUES ('JBR', 'JUST BEVERAGES');
+INSERT INTO suppliers VALUES ('JPS', 'JIM PARKER''S SHOP');
+INSERT INTO suppliers VALUES ('VSB', 'VIRGINIA STREET BAKERY');
+COMMIT;
+
+-- EMPLOYEES TABLE
+INSERT INTO employees VALUES
+  (201, 'SUSAN', 'BROWN', 'EXE', '01-JUN-1998', 30, '3484', NULL);
+INSERT INTO employees VALUES
+  (202, 'JIM', 'KERN', 'SAL', '16-AUG-1999', 25, '8722', 201);
+INSERT INTO employees VALUES
+  (203, 'MARTHA', 'WOODS', 'SHP', '02-FEB-2009', 25, '7591', 201);
+INSERT INTO employees VALUES
+  (204, 'ELLEN', 'OWENS', 'SAL', '01-JUL-2008', 15, '6830', 202);
+INSERT INTO employees VALUES
+  (205, 'HENRY', 'PERKINS', 'SAL', '01-MAR-2006', 25, '5286', 202);
+INSERT INTO employees VALUES
+  (206, 'CAROL', 'ROSE', 'ACT', NULL, NULL, NULL, NULL);
+INSERT INTO employees VALUES
+  (207, 'DAN', 'SMITH', 'SHP', '01-DEC-2008', 25, '2259', 203);
+INSERT INTO employees VALUES
+  (208, 'FRED', 'CAMPBELL', 'SHP', '01-APR-2008', 25, '1752', 203);
+INSERT INTO employees VALUES
+  (209, 'PAULA', 'JACOBS', 'MKT', '17-MAR-1999', 15, '3357', 201);
+INSERT INTO employees VALUES
+  (210, 'NANCY', 'HOFFMAN', 'SAL', '16-FEB-2007', 25, '2974', 203);
+COMMIT;
+
+
+-- FOODS TABLE
+INSERT INTO foods VALUES ('ASP', 'FS', 1, 'FRESH SALAD', 2, 0.25);
+INSERT INTO foods VALUES ('ASP', 'SP', 2, 'SOUP OF THE DAY', 1.5, NULL);
+INSERT INTO foods VALUES ('ASP', 'SW', 3, 'SANDWICH', 3.5, 0.4);
+INSERT INTO foods VALUES ('CBC', 'GS', 4, 'GRILLED STEAK', 6, 0.7);
+INSERT INTO foods VALUES ('CBC', 'SW', 5, 'HAMBURGER', 2.5, 0.3);
+INSERT INTO foods VALUES ('FRV', 'BR', 6, 'BROCCOLI', 1, 0.05);
+INSERT INTO foods VALUES ('FRV', 'FF', 7, 'FRENCH FRIES', 1.5, NULL);
+INSERT INTO foods VALUES ('JBR', 'AS', 8, 'SODA', 1.25, 0.25);
+INSERT INTO foods VALUES ('JBR', 'VR', 9, 'COFFEE', 0.85, 0.15);
+INSERT INTO foods VALUES ('VSB', 'AS', 10, 'DESSERT', 3, 0.5);
+COMMIT;
+
+
+-- LUNCHES TABLE.
+INSERT INTO lunches VALUES (1, '16-NOV-2011', 201, TO_DATE('13-OCT-2011 10:35:24', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (2, '16-NOV-2011', 207, TO_DATE('13-OCT-2011 10:35:39', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (3, '16-NOV-2011', 203, TO_DATE('13-OCT-2011 10:35:45', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (4, '16-NOV-2011', 204, TO_DATE('13-OCT-2011 10:35:58', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (6, '16-NOV-2011', 202, TO_DATE('13-OCT-2011 10:36:41', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (7, '16-NOV-2011', 210, TO_DATE('13-OCT-2011 10:38:52', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (8, '25-NOV-2011', 201, TO_DATE('14-OCT-2011 11:15:37', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (9, '25-NOV-2011', 208, TO_DATE('14-OCT-2011 14:23:36', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (12, '25-NOV-2011', 204, TO_DATE('14-OCT-2011 15:02:53', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (13, '25-NOV-2011', 207, TO_DATE('18-OCT-2011 08:42:11', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (15, '25-NOV-2011', 205, TO_DATE('21-OCT-2011 16:23:50', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (16, '05-DEC-2011', 201, TO_DATE('21-OCT-2011 16:23:59', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (17, '05-DEC-2011', 210, TO_DATE('21-OCT-2011 16:35:26', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (20, '05-DEC-2011', 205, TO_DATE('24-OCT-2011 09:55:27', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (21, '05-DEC-2011', 203, TO_DATE('24-OCT-2011 11:43:13', 'DD-MON-YYYY HH24:MI:SS'));
+INSERT INTO lunches VALUES (22, '05-DEC-2011', 208, TO_DATE('24-OCT-2011 14:37:32', 'DD-MON-YYYY HH24:MI:SS'));
+COMMIT;
+
+
+-- lunch_items TABLE.
+INSERT INTO lunch_items VALUES (1, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (1, 2, 'ASP', 'SW', 2);
+INSERT INTO lunch_items VALUES (1, 3, 'JBR', 'VR', 2);
+INSERT INTO lunch_items VALUES (2, 1, 'ASP', 'SW', 2);
+INSERT INTO lunch_items VALUES (2, 2, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (2, 3, 'JBR', 'VR', 2);
+INSERT INTO lunch_items VALUES (2, 4, 'VSB', 'AS', 1);
+INSERT INTO lunch_items VALUES (3, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (3, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (3, 3, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (3, 4, 'JBR', 'VR', 1);
+INSERT INTO lunch_items VALUES (3, 5, 'JBR', 'AS', 1);
+INSERT INTO lunch_items VALUES (4, 1, 'ASP', 'SP', 2);
+INSERT INTO lunch_items VALUES (4, 2, 'CBC', 'SW', 2);
+INSERT INTO lunch_items VALUES (4, 3, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (4, 4, 'JBR', 'AS', 2);
+INSERT INTO lunch_items VALUES (6, 1, 'ASP', 'SP', 1);
+INSERT INTO lunch_items VALUES (6, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (6, 3, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (6, 4, 'JBR', 'VR', 2);
+INSERT INTO lunch_items VALUES (6, 5, 'VSB', 'AS', 1);
+INSERT INTO lunch_items VALUES (7, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (7, 2, 'ASP', 'SP', 1);
+INSERT INTO lunch_items VALUES (7, 3, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (7, 4, 'JBR', 'VR', 1);
+INSERT INTO lunch_items VALUES (7, 5, 'VSB', 'AS', 1);
+INSERT INTO lunch_items VALUES (8, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (8, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (8, 3, 'JBR', 'AS', 1);
+INSERT INTO lunch_items VALUES (9, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (9, 2, 'ASP', 'SP', 1);
+INSERT INTO lunch_items VALUES (9, 3, 'CBC', 'SW', 2);
+INSERT INTO lunch_items VALUES (9, 4, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (9, 5, 'JBR', 'VR', 1);
+INSERT INTO lunch_items VALUES (9, 6, 'JBR', 'AS', 1);
+INSERT INTO lunch_items VALUES (12, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (12, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (12, 3, 'JBR', 'VR', 2);
+INSERT INTO lunch_items VALUES (12, 4, 'VSB', 'AS', 1);
+INSERT INTO lunch_items VALUES (13, 1, 'ASP', 'SP', 2);
+INSERT INTO lunch_items VALUES (13, 2, 'ASP', 'SW', 2);
+INSERT INTO lunch_items VALUES (13, 3, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (13, 4, 'JBR', 'AS', 1);
+INSERT INTO lunch_items VALUES (15, 1, 'ASP', 'SP', 1);
+INSERT INTO lunch_items VALUES (15, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (15, 3, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (15, 4, 'JBR', 'AS', 2);
+INSERT INTO lunch_items VALUES (16, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (16, 2, 'ASP', 'SW', 1);
+INSERT INTO lunch_items VALUES (16, 3, 'CBC', 'SW', 1);
+INSERT INTO lunch_items VALUES (16, 4, 'JBR', 'VR', 1);
+INSERT INTO lunch_items VALUES (16, 5, 'JBR', 'AS', 1);
+INSERT INTO lunch_items VALUES (17, 1, 'ASP', 'SP', 1);
+INSERT INTO lunch_items VALUES (17, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (17, 3, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (17, 4, 'JBR', 'VR', 2);
+INSERT INTO lunch_items VALUES (17, 5, 'VSB', 'AS', 1);
+INSERT INTO lunch_items VALUES (20, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (20, 2, 'ASP', 'SP', 1);
+INSERT INTO lunch_items VALUES (20, 3, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (20, 4, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (20, 5, 'JBR', 'AS', 1);
+INSERT INTO lunch_items VALUES (21, 1, 'ASP', 'SP', 1);
+INSERT INTO lunch_items VALUES (21, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (21, 3, 'JBR', 'VR', 2);
+INSERT INTO lunch_items VALUES (21, 4, 'VSB', 'AS', 1);
+INSERT INTO lunch_items VALUES (22, 1, 'ASP', 'FS', 1);
+INSERT INTO lunch_items VALUES (22, 2, 'CBC', 'GS', 1);
+INSERT INTO lunch_items VALUES (22, 3, 'FRV', 'FF', 1);
+INSERT INTO lunch_items VALUES (22, 4, 'JBR', 'VR', 1);
+INSERT INTO lunch_items VALUES (22, 5, 'JBR', 'AS', 1);
+COMMIT;
