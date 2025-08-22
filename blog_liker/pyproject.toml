@@ -1,18 +1,24 @@
 [project]
-name = "coding-problems"
+name = "Blogger with Liker"
 version = "0.1.0"
-description = "Various Python coding problems"
-readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
-    "aiohttp>=3.12.15",
-    "django>=5.2.4",
-    "django-allauth>=65.11.0",
-    "django-extensions>=4.1",
-    "faker>=37.5.3",
-    "pytest>=8.4.1",
-    "pytest-django>=4.11.1",
-    "werkzeug>=3.1.3",
+  "django ~=5.2.5",
+  "django-allauth[openid,socialaccount] ~=65.2",
+  "django-debug-toolbar ~=4.4",
+  "crispy-bootstrap5 ~=2024.10",
+  "gunicorn ~=23.0",
+  "psycopg[binary] ~=3.2",
+  "whitenoise ~=6.7",
+  "django-extensions>=4.1",
+  "faker>=37.5.3",
+  "pytest-django>=4.11.1",
+  "werkzeug>=3.1.3"
+]
+
+[dependency-groups]
+dev = [
+  "typing_extensions ~=4.12",
 ]
 
 [tool.ruff]

@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Blogs{% endblock title %}
+
+{% block content %}
+<h1>Latest Blogs</h1>
+
+<ul>
+  {% for blog in page_obj %}
+    <li>
+      <a href="{% url 'blogger:blog_detail' blog.id %}">
+        {{ blog.title }}
+      </a>Likes: <strong>{{blog.total_likes}}</strong>
+      <br>
+      <small>By {{ blog.author.email }} on {{ blog.created_at }}</small>
+      <p>{{ blog.content|truncatechars:100 }}</p>
+    </li>
+  {% empty %}
+    <li>No blogs available.</li>
+  {% endfor %}
+</ul>
+
+<!-- Pagination controls -->
+<div class="pagination">
+  {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">Previous</a><img src="{% static 'images/dot_clear.gif' %}" width="15" height="15" alt="blue dot">
+  {% endif %}
+
+  <span>{{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+  {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}"><img src="{% static 'images/dot_clear.gif' %}" width="15" height="15" alt="blue dot">Next</a>
+  {% endif %}
+</div>
+{% endblock content %}

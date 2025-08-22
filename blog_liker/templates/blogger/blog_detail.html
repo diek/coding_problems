@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Blog Detail{% endblock title %}
+
+{% block content %}
+<h1>{{ blog.title }}</h1>
+<p>By {{ blog.author.first_name }} on {{ blog.created_at }}</p>
+<p>{{ blog.content }}</p>
+
+<p><strong>{{ total_likes }}</strong> Likes</p>
+
+<form method="post" action="{% url 'blogger:toggle_like' blog.id %}">
+    {% csrf_token %}
+    <button type="submit">
+        {% if user_has_liked %}
+            Unlike
+        {% else %}
+            Like
+        {% endif %}
+    </button>
+</form>
+{% endblock content %}
